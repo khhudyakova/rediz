@@ -1,0 +1,36 @@
+<div class="plug">
+<h1>REdiz!</h1> 
+</div>
+<%= form_with(model: @contact_message || ContactMessage.new, url: contact_messages_path, local: true) do |form| %>
+    <% if @contact_message&.errors&.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@contact_message.errors.count, "error") %> prohibited this contact_message from being saved:</h2>
+        <ul>
+          <% @contact_message.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= form.label :name, "Имя" %>
+      <%= form.text_field :name, required: true %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :email, "Email" %>
+      <%= form.email_field :email, required: true %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :message, "Сообщение" %>
+      <%= form.text_area :message %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit "Отправить" %>
+    </div>
+  <% end %>
+<button> <%= link_to "О проекте", home_path, class: "btn btn-primary" %></button> 
+<button> <%= link_to 'Телеграм канал', 'https://t.me/rediz_you' %></button>

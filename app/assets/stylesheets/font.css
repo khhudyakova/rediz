@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url(asset-path)'HelveticaNeue-Roman.otf'; format:'opentype'; 
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Helvetica Neue';
+    src: url(asset-path)'HelveticaNeue-Bold.otf'; format:'opentype';
+    font-weight: bold;
+    font-style: normal;
+  }
+  
